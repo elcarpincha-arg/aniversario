@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para el amor de mi vida 💗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffe6f0, #ffd6ec);
+            color: #5e4b56;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background-color: #ff9ecf;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #ff7fbd;
+            transform: scale(1.05);
+        }
+
+        .divider {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.5rem;
+            opacity: 0.6;
+        }
+
+        .galeria-grid {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+            max-width: 900px;
+        }
+        
+        .galeria-grid img {
+            width: 100%;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .galeria-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        #inicio, #carta {
+            justify-content: center;
+        }
+
+        #galeria {
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PORTADA -->
+    <section id="inicio">
+        <h1>Para la persona que cambió mi vida 💗</h1>
+        <p>Hoy cumplimos un año, entonces hice especialmente para vos...</p>
+        <a href="#carta" class="btn">Empezar ✨</a>
+        <div class="divider">↓</div>
+    </section>
+
+    <!-- CARTA -->
+    <section id="carta">
+        <h2>Nuestra historia</h2>
+        <p>
+            Acá va un texto lindo
+        </p>
+        <a href="#galeria" class="btn">Seguir 💞</a>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria">
+    <h2>Nuestros momentos ✨</h2>
+
+    <div class="galeria-grid">
+
+        <div class="foto">
+            <img src="primera_cita.jpg" alt="primera cita">
+            <span class="descripcion">Nuestra primera cita 💕</span>
+        </div>
+    
+        <div class="foto">
+            <img src="20251019_221847.jpg" alt="una brujita en lo de la abuela">
+            <span class="descripcion">primera reunion familiar</span>
+        </div>
+    
+        <div class="foto">
+            <img src="cocina.jpg" alt="cocina juntos">
+            <span class="descripcion">Cocinamos juntos sin quemar nada</span>
+        </div>
+    
+        <div class="foto">
+            <img src="cancha.jpg" alt="juntos en la cancha">
+            <span class="descripcion">Cuando fuimos a la cancha 💗</span>
+        </div>
+    
+        <div class="foto">
+            <img src="favorita.jpg" alt="felices los 3">
+            <span class="descripcion">Mi foto favorita</span>
+        </div>
+    
+        <div class="foto">
+            <img src="galles.jpg" alt="galletitas de corazón">
+            <span class="descripcion">cuando me hiciste galletitas</span>
+        </div>
+    
+    </div>
+</section>
+
+</body>
+</html>
