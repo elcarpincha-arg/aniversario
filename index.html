@@ -212,71 +212,100 @@
             }
         }
 
-        .galeria-grid {
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            width: 80%;
-            max-width: 900px;
+        #musica {
+            background: #fff6fb;
         }
-        
-        .galeria-grid img {
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .carousel {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card {
+            text-decoration: none;
+            color: #080c01;
+            background: white;
+            padding: 15px;
+            border-radius: 25px;
+            transition: 0.4s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .card img {
             width: 100%;
             border-radius: 20px;
+        }
+
+        .active {
+            width: 320px;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .side {
+            width: 180px;
+            opacity: 0.5;
+            transform: scale(0.85);
+        }
+
+        .side:hover {
+            opacity: 0.8;
+        }
+
+        .arrow {
+            border: none;
+            background: #ffb6da;
+            color: white;
+            font-size: 2rem;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
             cursor: pointer;
             transition: 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
-        
-        .galeria-grid img:hover {
-            transform: scale(1.05);
+
+        .arrow:hover {
+            background: #ff8fc6;
+            transform: scale(1.1);
         }
-        
-        .foto {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            cursor: pointer;
+
+        @media (max-width: 768px) {
+
+        .active {
+            width: 220px;
         }
-        
-        .foto img {
-            width: 100%;
-            display: block;
-            transition: transform 0.4s ease, filter 0.4s ease;
+
+        .side {
+            width: 90px;
         }
-        
-        .descripcion {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 1rem;
-            font-weight: 500;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            text-align: center;
-            padding: 10px 15px;
-            backdrop-filter: blur(4px);
-            border-radius: 15px;
+
+        .arrow {
+            width: 45px;
+            height: 45px;
+            font-size: 1.5rem;
         }
-        
-        .foto:hover img {
-            transform: scale(1.08);
-            filter: brightness(60%);
+
+        .carousel {
+            gap: 10px;
         }
-        
-        .foto:hover .descripcion {
-            opacity: 3;
-        }
+    }
 
         #inicio, #carta {
             justify-content: center;
         }
 
-        #galeria {
-            justify-content: flex-start;
+
+        #final {
+            background: linear-gradient(135deg, #ffdae9, #ffd1e3);
         }
     </style>
 </head>
@@ -286,7 +315,10 @@
     <!-- PORTADA -->
     <section id="inicio">
         <h1>Para la persona que cambió mi vida 💗</h1>
-        <p>Hoy cumplimos un año, entonces hice especialmente para vos...</p>
+        <p>
+            Hoy hace un año empezó la mejor etapa de mi vida.
+            Y quise hacerte algo distinto, algo nuestro.
+        </p>
         <p class="musica-texto">Ponete auriculares y dale play para mejorar tu experiencia 🎧</p>
         <button class="btn" onclick="toggleMusica()" id="botonMusica">
             ▶ 
@@ -294,16 +326,16 @@
         <audio id="musica">
             <source src="puede-ser-official-video.mp3" type="audio/mpeg">
         </audio>
-        <a href="#carta" class="btn">Empezar ✨</a>
+        <a href="#contador" class="btn">Empezar ✨</a>
         <div class="divider">↓</div>
     </section>
 
     <!-- CONTADOR -->
      <section id="contador">
-    <h2>Desde el 25 de mayo de 2025 ❤️<br>y contando...</h2>
+        <h2>Desde el 25 de mayo de 2025 ❤️<br>y contando...</h2>
 
-    <div class="contador-grid">
-        <div class="bloque">
+        <div class="contador-grid">
+            <div class="bloque">
             <span id="dias">0</span>
             <p>Días</p>
         </div>
@@ -319,8 +351,7 @@
             <span id="segundos">0</span>
             <p>Segundos</p>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- CARTA -->
     <section id="carta">
@@ -331,11 +362,27 @@
         <a href="#galeria" class="btn">Seguir 💞</a>
     </section>
 
+
+    <section class="capitulo">
+        <div class="capitulo-contenido">
+            <span class="numero">25 de Mayo de 2025</span>
+            <h2>El Primero de toda una Eternidad</h2>
+            <p>
+                Ese dia estaba re nervioso. La noche anterior habia salido con los chicos, y
+                me fui a acostar a eso de las 5 de la mañana, no podia pensar en otra cosa que
+                en que sean las 10 y poder verte, tenia miedo de quedarme dormido y de no ir. 
+                Me invitaste a servir con vos en Kids y no esperaba que ese dia nos dieramos 
+                un beso, y no cualquier beso, sino el primero de muchos y ojalá que el primero
+                de toda una eternidad.
+            </p>
+        </div>
+    </section>
+
     <!-- PARHELIO -->
     <section id="parhelio" class="diario">
         <div class="diario-contenido">
             <div class="texto">
-                <h2>25 de mayo de 2025</h2>
+                <h2>29 de mayo de 2025</h2>
                 <h3>El día del parhelio ☀️</h3>
                 <p>
                     Ese día apareció algo raro en el cielo. Un fenómeno que se llama
@@ -360,48 +407,60 @@
         </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section id="galeria">
-    <h2>Algunos momentos lindos ✨</h2>
+    <section id="final">
+        <h2>Y esto recién empieza 💖</h2>
 
-    <div class="galeria-grid">
+        <p>
+        Gracias por este primer año juntos.
+        Gracias por cada abrazo, cada risa, cada salida,
+        cada charla y cada momento que vivimos.
+        </p>
 
-        <div class="foto">
-            <img src="primera_cita.jpg" alt="primera cita">
-            <span class="descripcion">Nuestra primera cita 💕</span>
-        </div>
-    
-        <div class="foto">
-            <img src="20251019_221847.jpg" alt="una brujita en lo de la abuela">
-            <span class="descripcion">primera reunion familiar</span>
-        </div>
-    
-        <div class="foto">
-            <img src="cocina.jpg" alt="cocina juntos">
-            <span class="descripcion">Cocinamos juntos sin quemar nada</span>
-        </div>
-    
-        <div class="foto">
-            <img src="cancha.jpg" alt="juntos en la cancha">
-            <span class="descripcion">Cuando fuimos a la cancha 💗</span>
-        </div>
-    
-        <div class="foto">
-            <img src="favorita.jpg" alt="felices los 3">
-            <span class="descripcion">Mi foto favorita</span>
-        </div>
-    
-        <div class="foto">
-            <img src="galles.jpg" alt="galletitas de corazón">
-            <span class="descripcion">cuando me hiciste galletitas</span>
-        </div>
-        
-    </div>
-</section>
+        <p>
+        Sos la persona con la que quiero seguir creando recuerdos,
+        creciendo y compartiendo mi vida.
+        </p>
 
+        <p>
+        Te amo muchísimo ❤️
+        </p>
+    </section>
+
+    <!-- canciones -->
+    <section id="musica">
+        <h2>Nuestras canciones 🎶</h2>
+
+    <div class="carousel-container">
+
+        <button class="arrow" onclick="cambiarCancion(-1)">❮</button>
+
+            <div class="carousel">
+
+                <a id="anterior" class="card side" target="_blank">
+                    <img id="imgAnterior">
+                    <h3 id="tituloAnterior"></h3>
+                </a>
+
+                <a id="actual" class="card active" target="_blank">
+                    <img id="imgActual">
+                    <h3 id="tituloActual"></h3>
+                    <p id="artistaActual"></p>
+                </a>
+
+                <a id="siguiente" class="card side" target="_blank">
+                    <img id="imgSiguiente">
+                    <h3 id="tituloSiguiente"></h3>
+                </a>
+
+            </div>
+
+        <button class="arrow" onclick="cambiarCancion(1)">❯</button>
+
+        </div>
+    </section>   
 
 <script>
-    const fechaInicio = new Date(2024, 4, 25, 0, 0, 0); // Ajustá si hace falta
+    const fechaInicio = new Date(2025, 4, 25, 0, 0, 0); // Ajustá si hace falta
     
     function actualizarContador() {
         const ahora = new Date();
@@ -449,6 +508,133 @@
             botonMusica.textContent = "▶";
         }
     }
+
+    const canciones = [
+        {
+            titulo: "Nada más que vos",
+            artista: "Koino Yokan",
+            imagen: "0x1900-000000-80-0-0.jpg",
+            link: "https://youtu.be/Wu7F7gyG8x0?si=xdY6ijfob6NGN1mA"
+        },
+
+        {
+            titulo: "Satisfy my Soul",
+            artista: "Bob Marley & the wailers",
+            imagen: "ab67616d0000b273387799441ba867649dfbb702.jpg",
+            link: "https://www.youtube.com/watch?v=5O1WKodlCIA"
+        },
+
+        {
+            titulo: "Y mi corazón contento",
+            artista: "Zona Ganjah",
+            imagen: "ab67616d0000b273acfd0e8e9c641de48e903a18.jpg",
+            link: "https://www.youtube.com/watch?v=lwaFZr_pqcI"
+        },
+
+        {
+            titulo: "PUEDE SER",
+            artista: "LOUTA",
+            imagen: "images.jpg",
+            link: "https://www.youtube.com/watch?v=zkPWsnep6dg"
+        },
+
+        {
+            titulo: "Canción 2",
+            artista: "Mau & Ricky",
+            imagen: "ab67616d00001e0230907e494127024c418553f5.jpg",
+            link: "https://youtu.be/mwmblHj_0fs?si=HyGg9Wo9J2M3cc4t"
+        },
+
+        {
+            titulo: "Imán",
+            artista: "Mica Sotera",
+            imagen: "iman.jpg",
+            link: "https://www.youtube.com/watch?v=eIt5Jy0-EuY"
+        },
+
+        {
+            titulo: "Lejos de Todo",
+            artista: "Koino Yokan",
+            imagen: "0x1900-000000-80-0-0.jpg",
+            link: "https://www.youtube.com/watch?v=qjA0XQ4-xrQ"
+        },
+
+        {
+            titulo: "Aire",
+            artista: "Los Cafres",
+            imagen: "aire.jpg",
+            link: "https://www.youtube.com/watch?v=O9OaDC97W1o"
+        },
+
+        {
+            titulo: "MIllónes",
+            artista: "Camilo",
+            imagen: "camilo.jpg",
+            link: "https://www.youtube.com/watch?v=krP539YBF7U"
+        },
+
+
+    ];
+
+    let indiceActual = 0;
+
+    function mostrarCancion() {
+
+        const anterior =
+            (indiceActual - 1 + canciones.length) % canciones.length;
+
+        const siguiente =
+            (indiceActual + 1) % canciones.length;
+
+        // ACTUAL
+        document.getElementById("imgActual").src =
+        canciones[indiceActual].imagen;
+
+        document.getElementById("tituloActual").textContent =
+        canciones[indiceActual].titulo;
+
+        document.getElementById("artistaActual").textContent =
+        canciones[indiceActual].artista;
+
+        document.getElementById("actual").href =
+        canciones[indiceActual].link;
+
+        // ANTERIOR
+        document.getElementById("imgAnterior").src =
+        canciones[anterior].imagen;
+
+        document.getElementById("tituloAnterior").textContent =
+        canciones[anterior].titulo;
+
+        document.getElementById("anterior").href =
+        canciones[anterior].link;
+
+        // SIGUIENTE
+        document.getElementById("imgSiguiente").src =
+        canciones[siguiente].imagen;
+
+        document.getElementById("tituloSiguiente").textContent =
+        canciones[siguiente].titulo;
+
+        document.getElementById("siguiente").href =
+        canciones[siguiente].link;
+    }
+
+    function cambiarCancion(direccion) {
+        indiceActual += direccion;
+
+        if (indiceActual < 0) {
+            indiceActual = canciones.length - 1;
+        }
+
+        if (indiceActual >= canciones.length) {
+            indiceActual = 0;
+        }
+
+        mostrarCancion();
+    }
+
+    mostrarCancion();
 
 </script>
 
