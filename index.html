@@ -5,8 +5,7 @@
     <title>Para el amor de mi vida 💗</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,8 +15,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ffe6f0, #ffd6ec);
+            font-family: 'Quicksand', sans-serif;            background: linear-gradient(135deg, #ffe6f0, #ffd6ec);
             color: #080c01;
             overflow-x: hidden;
         }
@@ -42,8 +40,7 @@
         }
 
         h1, h2 {
-            font-family: 'Playfair Display', serif;
-        }
+            font-family: 'Cormorant Garamond', serif;        }
 
         h1 {
             font-size: 3rem;
@@ -131,6 +128,32 @@
         #botonMusica {
             margin-top: 15px;
             background-color: #ffb6da;
+        }
+
+        #razones {
+            background: linear-gradient(135deg, #fff0f7, #ffe1ef);
+        }
+
+        .razones-grid {
+            margin-top: 40px;
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .razon {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .razon:hover {
+            transform: translateY(-5px) scale(1.02);
         }
 
         .diario {
@@ -223,7 +246,7 @@
             justify-content: center;
             align-items: center;
             gap: 20px;
-            overflow: hidden;
+            overflow: hidden;  
         }
 
         .carousel {
@@ -303,6 +326,22 @@
         }
     }
 
+    .foto-final {
+        margin-top: 35px;
+    }
+
+    .foto-final img {
+        width: 320px;
+        max-width: 85vw;
+        border-radius: 30px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+        transition: 0.4s ease;
+    }
+
+    .foto-final img:hover {
+        transform: scale(1.02);
+    }
+
         #inicio, #carta {
             justify-content: center;
         }
@@ -321,7 +360,8 @@
         <h1>Para la persona que cambió mi vida 💗</h1>
         <p>
             Hoy hace un año empezó la mejor etapa de mi vida.
-            Y quise hacerte algo distinto, algo nuestro.
+            Y quise hacerte algo distinto, algo personal,
+            y como tenes un novio que programa...
         </p>
         <p class="musica-texto">Ponete auriculares y dale play para mejorar tu experiencia 🎧</p>
         <button class="btn" onclick="toggleMusica()" id="botonMusica">
@@ -357,31 +397,6 @@
         </div>
     </section>
 
-    <!-- CARTA -->
-    <section id="carta">
-        <h2>Nuestra historia</h2>
-        <p>
-            Acá va un texto lindo
-        </p>
-        <a href="#galeria" class="btn">Seguir 💞</a>
-    </section>
-
-
-    <section class="capitulo">
-        <div class="capitulo-contenido">
-            <span class="numero">25 de Mayo de 2025</span>
-            <h2>El Primero de toda una Eternidad</h2>
-            <p>
-                Ese dia estaba re nervioso. La noche anterior habia salido con los chicos, y
-                me fui a acostar a eso de las 5 de la mañana, no podia pensar en otra cosa que
-                en que sean las 10 y poder verte, tenia miedo de quedarme dormido y de no ir. 
-                Me invitaste a servir con vos en Kids y no esperaba que ese dia nos dieramos 
-                un beso, y no cualquier beso, sino el primero de muchos y ojalá que el primero
-                de toda una eternidad.
-            </p>
-        </div>
-    </section>
-
     <!-- PARHELIO -->
     <section id="parhelio" class="diario">
         <div class="diario-contenido">
@@ -411,28 +426,55 @@
         </div>
     </section>
 
-    <section id="final">
-        <h2>Y esto recién empieza 💖</h2>
+    <section id="razones">
+    <h2>Razones para estar juntos 💖</h2>
 
-        <p>
-        Gracias por este primer año juntos.
-        Gracias por cada abrazo, cada risa, cada salida,
-        cada charla y cada momento que vivimos.
-        </p>
+    <div class="razones-grid">
 
-        <p>
-        Sos la persona con la que quiero seguir creando recuerdos,
-        creciendo y compartiendo mi vida.
-        </p>
+        <div class="razon">
+            Porque con vos todo se siente más lindo.
+        </div>
 
-        <p>
-        Te amo muchísimo ❤️
-        </p>
+        <div class="razon">
+            Porque siempre quiero contarte primero las cosas.
+        </div>
+
+        <div class="razon">
+            Porque incluso los días normales son especiales con vos.
+        </div>
+
+        <div class="razon">
+            Porque amo nuestras conversaciones eternas.
+        </div>
+
+        <div class="razon">
+            · Porque sos mi lugar seguro.
+        </div>
+
+        <div class="razon">
+            Porque me hacés sentir amado de verdad.
+        </div>
+
+        <div class="razon">
+            Porque nos reímos de cualquier boludez.
+        </div>
+
+        <div class="razon">
+            Porque quiero seguir creando recuerdos con vos.
+        </div>
+
+        </div>
+
+        <a href="#parhelio" class="btn">Seguir 💞</a>
     </section>
 
     <!-- canciones -->
     <section id="musica">
-        <h2>Nuestras canciones 🎶</h2>
+        <h2>CANCIONERO</h2>
+        <h4>y quiero dejarte por acá una sección con
+            algunas de las canciones que, cuando las escucho,
+            solo puedo pensar en vos.
+        </h4>
 
         <div class="carousel-container">
 
@@ -460,6 +502,29 @@
 
         </div>
     </section>   
+
+    <section id="final">
+        <h2>Y esto recién empieza 💖</h2>
+
+        <p>
+        Gracias por este primer año juntos.
+        Gracias por cada abrazo, cada risa, cada salida,
+        cada charla y cada momento que vivimos.
+        </p>
+
+        <p>
+        Sos la persona con la que quiero seguir creando recuerdos,
+        creciendo y compartiendo mi vida.
+        </p>
+
+        <p>
+        Te amo muchísimo ❤️
+        </p>
+
+        <div class="foto-final">
+            <img src="nosotros.jpg" alt="Nosotros">
+        </div>
+    </section>
 
 <script>
     const fechaInicio = new Date(2025, 4, 25, 0, 0, 0); // Ajustá si hace falta
