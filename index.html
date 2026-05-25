@@ -229,7 +229,8 @@
         .carousel {
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 10px;
         }
 
         .card {
@@ -249,14 +250,14 @@
         }
 
         .active {
-            width: 320px;
+            width: 220px;
             transform: scale(1);
             opacity: 1;
         }
 
         .side {
-            width: 85px;
-            opacity: 0.5;
+            width: 90px;
+            opacity: 0.45;
             transform: scale(0.85);
         }
 
@@ -433,9 +434,9 @@
     <section id="musica">
         <h2>Nuestras canciones 🎶</h2>
 
-    <div class="carousel-container">
+        <div class="carousel-container">
 
-        <button class="arrow" onclick="cambiarCancion(-1)">❮</button>
+
 
             <div class="carousel">
 
@@ -456,8 +457,6 @@
                 </a>
 
             </div>
-
-        <button class="arrow" onclick="cambiarCancion(1)">❯</button>
 
         </div>
     </section>   
@@ -638,6 +637,27 @@
     }
 
     mostrarCancion();
+
+    let startX = 0;
+    let endX = 0;
+
+    const carousel = document.querySelector(".carousel");
+
+    carousel.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].clientX;
+
+        if (startX - endX > 50) {
+        cambiarCancion(1);
+        }
+
+        if (endX - startX > 50) {
+        cambiarCancion(-1);
+        }
+    });
 
 </script>
 
